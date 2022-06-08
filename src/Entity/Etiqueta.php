@@ -34,6 +34,11 @@ class Etiqueta
         $this->entradas = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->nombre;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

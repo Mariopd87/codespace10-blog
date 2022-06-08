@@ -44,6 +44,11 @@ class Comentario
      */
     private $usuario;
 
+    public function __toString()
+    {
+        return $this->fecha->format('d/m/Y H:i:s') . ' - ' . $this->entrada->getTitulo();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
